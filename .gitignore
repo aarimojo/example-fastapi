@@ -2,7 +2,6 @@ __pycache__
 venv/
 .env
 alembic copy.ini
-versions/
 alembic_prior/
 conda*
 docker*
