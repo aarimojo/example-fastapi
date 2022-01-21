@@ -6,7 +6,7 @@ from time import time
 from psycopg2.extras import RealDictCursor
 from .config import settings
 
-SQLALCHEMY_URL = f'{settings.database_url}'
+SQLALCHEMY_URL = f'{settings.database_url_real}'
 
 engine = create_engine(SQLALCHEMY_URL)
 

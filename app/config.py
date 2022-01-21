@@ -4,7 +4,7 @@ class Settings(BaseSettings):
     database_hostname: str
     database_port: str
     database_password: str
-    database_url: str
+    database_url_real: str
     database_username: str
     database_name: str
     secret_key: str
