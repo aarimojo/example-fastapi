@@ -1,14 +1,11 @@
 __pycache__
 venv/
 .env
-alembic*
-alembic.ini
+alembic copy.ini
 versions/
+alembic_prior/
 conda*
 docker*
-gunicorn*
-nginx
-Procfile
 .coverage
 .dockerignore
 .github
