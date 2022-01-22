@@ -6,7 +6,10 @@ from time import time
 from psycopg2.extras import RealDictCursor
 from .config import settings
 
-SQLALCHEMY_URL = f'{settings.database_url_real}'
+db1 = f'postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}'
+db2 = f'{settings.database_url_real}'
+
+SQLALCHEMY_URL = db1
 print('-------------------')
 print('database settings: ', SQLALCHEMY_URL)
 print('-------------------')
