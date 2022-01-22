@@ -12,3 +12,4 @@ docker*
 tests/
 app copy/
 .DS_Store
+gunicorn.service
