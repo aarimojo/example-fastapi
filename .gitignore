@@ -7,9 +7,10 @@ conda*
 docker*
 .coverage
 .dockerignore
-.github
 .vscode
 tests/
 app copy/
 .DS_Store
 gunicorn.service
+
+calculations.py
