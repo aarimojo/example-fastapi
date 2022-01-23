@@ -8,7 +8,6 @@ docker*
 .coverage
 .dockerignore
 .vscode
-tests/
 app copy/
 .DS_Store
 gunicorn.service
