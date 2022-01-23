@@ -16,6 +16,7 @@ jobs:
       SECRET_KEY: omasdomdaosmdo12mo1momgwin1inr2nt21mpmxaWD!ac
       ALGORITHM: HS256
       ACCESS_TOKEN_EXPIRE_MINUTES: 60
+      ENV_NAME: ${{secrets.ENV_NAME}}
 
     services:
       postgres:
