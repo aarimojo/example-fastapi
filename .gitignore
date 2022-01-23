@@ -13,3 +13,5 @@ app copy/
 gunicorn.service
 
 calculations.py
+tests/test_calculations.py
+.old
