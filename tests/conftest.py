@@ -16,9 +16,9 @@ db2 = f'{settings.database_url_real}_test'
 db3 = 'postgresql://aaripostgres:Zapopan10@localhost:5432/fastapi_test'
 
 SQLALCHEMY_URL = db1
-# print('-------------------')
-# print('database settings testing: ', SQLALCHEMY_URL)
-# print('-------------------')
+print('-------------------')
+print('database settings testing: ', SQLALCHEMY_URL)
+print('-------------------')
 
 engine = create_engine(SQLALCHEMY_URL)
 
