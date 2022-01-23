@@ -11,8 +11,8 @@ jobs:
       DATABASE_PORT: 5432
       DATABASE_PASSWORD: test
       DATABASE_NAME: fastapi
-      DATABASE_USERNAME: ${{secrets.DATABASE_USERNAME}}
-      DATABASE_URL_REAL: postgresql://postgres:test@localhost:5432/fastapi
+      DATABASE_USERNAME: ${{secrets.DATABASE_NAME}}_test
+      DATABASE_URL_REAL: postgresql://postgres:test@localhost:5432/${{secrets.DATABASE_NAME}}_name
       SECRET_KEY: omasdomdaosmdo12mo1momgwin1inr2nt21mpmxaWD!ac
       ALGORITHM: HS256
       ACCESS_TOKEN_EXPIRE_MINUTES: 60
@@ -22,19 +22,7 @@ jobs:
         image: postgres
         env:
           POSTGRES_PASSWORD: test
-          POSTGRES_DB: fastapi_test
-        ports:
-          - 5432:5432
-        options: >-
-          --health-cmd pg_isready
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
-      postgres_orig:
-        image: postgres
-        env:
-          POSTGRES_PASSWORD: test
-          POSTGRES_DB: fastapi
+          POSTGRES_DB: ${{secrets.DATABASE_NAME}}_test
         ports:
           - 5432:5432
         options: >-
