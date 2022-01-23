@@ -11,7 +11,7 @@ from sqlalchemy.orm import sessionmaker
 from app.database import Base
 from app import models
 
-db1 = f'postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}_test'
+db1 = f'postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/fastapi_test'
 db2 = f'{settings.database_url_real}'
 db3 = 'postgresql://aaripostgres:Zapopan10@localhost:5432/fastapi'
 
