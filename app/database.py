@@ -11,7 +11,7 @@ db2 = f'{settings.database_url_real}'
 
 SQLALCHEMY_URL = db1
 print('-------------------')
-print('database settings: ', SQLALCHEMY_URL)
+print('database settings main: ', SQLALCHEMY_URL)
 print('-------------------')
 
 try:
