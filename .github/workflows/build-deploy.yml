@@ -10,9 +10,9 @@ jobs:
       DATABASE_HOSTNAME: localhost
       DATABASE_PORT: 5432
       DATABASE_PASSWORD: test
-      DATABASE_NAME: fastapi_test
+      DATABASE_NAME: fastapi
       DATABASE_USERNAME: ${{secrets.DATABASE_USERNAME}}
-      DATABASE_URL_REAL: postgresql://postgres:test@localhost:5432/fastapi_test
+      DATABASE_URL_REAL: postgresql://postgres:test@localhost:5432/fastapi
       SECRET_KEY: omasdomdaosmdo12mo1momgwin1inr2nt21mpmxaWD!ac
       ALGORITHM: HS256
       ACCESS_TOKEN_EXPIRE_MINUTES: 60
