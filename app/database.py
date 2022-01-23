@@ -14,20 +14,20 @@ print('-------------------')
 print('database settings main: ', SQLALCHEMY_URL)
 print('-------------------')
 
-try:
-    engine = create_engine(SQLALCHEMY_URL)
+# try:
+engine = create_engine(SQLALCHEMY_URL)
 
-    SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
-    Base = declarative_base()
+Base = declarative_base()
 
 
-    def get_db():
-        db = SessionLocal()
-        try:
-            yield db
-        finally:
-            db.close()
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
 
     # while True:
     #     try:
@@ -41,5 +41,5 @@ try:
     #         print('Error: ', error)
     #         time.sleep(2)
 
-except:
-    print('shits fucked')
+# except:
+#     print('shits fucked')

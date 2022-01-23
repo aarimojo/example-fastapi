@@ -4,16 +4,8 @@ from . import models
 from .database import engine
 from .routers import post, user, auth, vote
 from pydantic import BaseSettings
-from .config import settings
-from app import config
 
-try:
-    models.Base.metadata.create_all(bind=engine)
-except:
-    if settings.env_name == 'staging':
-        print('Testing Env')
-    else:
-        raise Exception('Failed to connect to db')
+models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
